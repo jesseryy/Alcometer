@@ -74,7 +74,7 @@ const BasicStyle = StyleSheet.create({
   
     },
   
-    containerColor: '#1bff07',
+    containerColor: '#11f8ed',
 });
 
 const DarkStyle = StyleSheet.create({
@@ -152,7 +152,7 @@ const DarkStyle = StyleSheet.create({
 
   },
 
-  containerColor: '#1bff07',
+  containerColor: '#11f8ed',
 });
 
   export {BasicStyle, DarkStyle };
