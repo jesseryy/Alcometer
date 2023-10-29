@@ -15,8 +15,7 @@ export default function App() {
   
   const currentStyle = style ? DarkStyle : BasicStyle;
 
-
-
+  
   function calculateResult(){
 
     const lit = bot * 0.33;
@@ -26,16 +25,9 @@ export default function App() {
     const weightAlert =() => {
       Alert.alert('Weight parameter can not be empty.')
     }
-    const alcoholAlert =() => {
-      Alert.alert('No Alcohol')
-    }
     
     if (weight === 0) {
       setResult(weightAlert)
-    }
-
-    if (result < 0) {
-      setResult(alcoholAlert)
     }
 
   
@@ -65,6 +57,9 @@ export default function App() {
     }
   }
 
+  if(result < 0){
+    setResult(0)
+  }
 
 
   return (
