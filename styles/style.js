@@ -1,13 +1,13 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, StatusBar } from 'react-native';
 
 const BasicStyle = StyleSheet.create({
     container: {
+      marginTop: StatusBar.currentHeight + 5,
       flex: 1,
       backgroundColor: '#ffffff',
       textColor: '#000000',
     },
     header: {
-      marginTop: 30,
       marginBottom: 15,
       height: 60,
       backgroundColor: '#11f8ed',
@@ -79,12 +79,12 @@ const BasicStyle = StyleSheet.create({
 
 const DarkStyle = StyleSheet.create({
   container: {
+    marginTop: StatusBar.currentHeight + 5,
     flex: 1,
     backgroundColor: '#000000',
     textColor: '#ffffff',
   },
   header: {
-    marginTop: 30,
     marginBottom: 15,
     height: 60,
     backgroundColor: '#11f8ed',

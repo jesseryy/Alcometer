@@ -53,7 +53,7 @@ export default function App() {
   function resultcolor(){
     if(result>= 0.5 && result <1){
       return{
-        color: '#fbff00'
+        color: '#d8db04'
       }
     }
     if(result>=1){
