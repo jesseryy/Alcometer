@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Pressable, ScrollView, Text, TextInput, View } from 'react-native';
+import { Pressable, ScrollView, Text, TextInput, View, Alert } from 'react-native';
 import NumericInput from 'react-native-numeric-input';
 import { RadioButton, Switch } from 'react-native-paper';
 import styles, { BasicStyle, DarkStyle } from './styles/style';
@@ -15,12 +15,32 @@ export default function App() {
   
   const currentStyle = style ? DarkStyle : BasicStyle;
 
+
+
   function calculateResult(){
 
     const lit = bot * 0.33;
     const gram = lit * 8 * 4.5;
     const burn = weight / 10;
     const gramsl = gram - burn * h;
+    const weightAlert =() => {
+      Alert.alert('Weight parameter can not be empty.')
+    }
+    const bottleAlert =() => {
+      Alert.alert('Bottle parameter can not be empty.')
+    }
+    const timeAlert =() => {
+      Alert.alert('Hours parameter can not be empty.')
+    }
+    if (weight === 0) {
+      setResult(weightAlert)
+    }
+    if (bot === 0) {
+      setResult(bottleAlert)
+    }
+    if (h === 0) {
+      setResult(timeAlert)
+    }
 
     if (gender === 'Male') {
       setResult(gramsl / (weight * 0.7))
